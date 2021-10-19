@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(255, 242, 229);
+    max-width: 500px;
+    margin: auto;
+} 
+
+
+
+h1, h3, p{
+    color:rgb(31, 31, 31);
+    font-family: 'Roboto', sans-serif;
+}
+
+ .chart{
+    background-color: rgb(255, 242, 229);
+    width:330px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 242, 229);
+} 
+
