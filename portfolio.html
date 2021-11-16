@@ -39,7 +39,7 @@
       // First job is to set the chart as a JS variable:
       var myChart1 = "chart1_covidUKRegions.json";
       // Now we simply insert it, using Vega's embed code:
-      // The embed function needs to be told the location, and what to put there. 
+      // The embed function needs to be told the location, and what to put there.
       vegaEmbed('#firstChart', myChart1);
     </script>
 
@@ -55,7 +55,7 @@
       // First job is to set the chart as a JS variable:
       var myChart2 = "chart2_ukProductivity.json";
       // Now we simply insert it, using Vega's embed code:
-      // The embed function needs to be told the location, and what to put there. 
+      // The embed function needs to be told the location, and what to put there.
       vegaEmbed('#secondChart', myChart2);
     </script>
 
@@ -71,7 +71,7 @@
       // First job is to set the chart as a JS variable:
       var myChart3 = "APIchart.json";
       // Now we simply insert it, using Vega's embed code:
-      // The embed function needs to be told the location, and what to put there. 
+      // The embed function needs to be told the location, and what to put there.
       vegaEmbed('#thirdChart', myChart3);
     </script>
 
@@ -92,7 +92,7 @@
       // First job is to set the chart as a JS variable:
       var myChart4 = "APIchart.json";
       // Now we simply insert it, using Vega's embed code:
-      // The embed function needs to be told the location, and what to put there. 
+      // The embed function needs to be told the location, and what to put there.
       vegaEmbed('#fourthChart', myChart4);
     </script>
 
@@ -108,6 +108,30 @@
       vegaEmbed('#fifthChart', myChart5);
     </script>
   </div>
+
+
+  <div class="chart" id="sixthChart">
+    <script>
+      var myChart6 = "bar.json";
+      vegaEmbed('#sixthChart', myChart6);
+    </script>
+  </div>
+
+  <div class="chart" id="seventhChart">
+    <script>
+      var myChart7 = "triggraph.json";
+      vegaEmbed('#seventhChart', myChart7);
+    </script>
+  </div>
+
+  <div class="chart" id="eighthChart">
+    <script>
+      var myChart8 = "addedtrig.json";
+      vegaEmbed('#eighthChart', myChart8);
+    </script>
+  </div>
+
+<!-- Next project will use the sportdataAPI, maybe looking at whether the bookmakers' favourites match results -->
 
 </body>
 
