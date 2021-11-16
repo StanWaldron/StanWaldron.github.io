@@ -1,0 +1,16 @@
+{
+    "description": "A simple bar chart with embedded data.",
+    "data": {
+      "values": [
+        {"a": "A", "b": 46}, {"a": "B", "b": 101}, {"a": "C", "b": 36},
+        {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 74},
+        {"a": "G", "b": 29}, {"a": "H", "b": 46}, {"a": "I", "b": 52}
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
+      "y": {"field": "b", "type": "quantitative"}
+    }
+  }
+  
