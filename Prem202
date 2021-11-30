@@ -1,0 +1,14 @@
+{
+    "query": {
+        "apikey": "d4efb8d0-3ef3-11ec-ba43-03001e89efcc"
+    },
+    "data": {
+        "season_id": 352,
+        "name": "20/21",
+        "is_current": 0,
+        "country_id": 42,
+        "league_id": 237,
+        "start_date": "2020-09-11",
+        "end_date": "2021-05-24"
+    }
+}
