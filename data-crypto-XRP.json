@@ -1,0 +1,54 @@
+[
+    {
+        "id": "XRP",
+        "currency": "XRP",
+        "symbol": "XRP",
+        "name": "XRP",
+        "logo_url": "https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/XRP.svg",
+        "status": "active",
+        "price": "0.83724116",
+        "price_date": "2022-01-03T00:00:00Z",
+        "price_timestamp": "2022-01-03T17:33:00Z",
+        "circulating_supply": "47535964473",
+        "max_supply": "100000000000",
+        "market_cap": "39799066090",
+        "market_cap_dominance": "0.0170",
+        "num_exchanges": "271",
+        "num_pairs": "2375",
+        "num_pairs_unmapped": "102",
+        "first_candle": "2013-05-09T00:00:00Z",
+        "first_trade": "2013-05-09T00:00:00Z",
+        "first_order_book": "2018-08-29T00:00:00Z",
+        "rank": "8",
+        "rank_delta": "0",
+        "high": "2.75776807",
+        "high_timestamp": "2018-01-07T00:00:00Z",
+        "1d": {
+            "volume": "1459424000.47",
+            "price_change": "-0.021051572",
+            "price_change_pct": "-0.0245",
+            "volume_change": "204308581.80",
+            "volume_change_pct": "0.1628",
+            "market_cap_change": "-1000706762.91",
+            "market_cap_change_pct": "-0.0245"
+        },
+        "30d": {
+            "volume": "84106755365.92",
+            "price_change": "-0.012200743",
+            "price_change_pct": "-0.0144",
+            "volume_change": "-30675799695.92",
+            "volume_change_pct": "-0.2673",
+            "market_cap_change": "-334766770.35",
+            "market_cap_change_pct": "-0.0083"
+        },
+        "ytd": {
+            "volume": "3538380475.12",
+            "price_change": "0.0060688067",
+            "price_change_pct": "0.0073",
+            "volume_change": "-655159094.86",
+            "volume_change_pct": "-0.1562",
+            "market_cap_change": "288486579.98",
+            "market_cap_change_pct": "0.0073"
+        }
+    }
+]

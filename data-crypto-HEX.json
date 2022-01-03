@@ -1,0 +1,55 @@
+[
+    {
+        "id": "HEX",
+        "currency": "HEX",
+        "symbol": "HEX",
+        "name": "HEX",
+        "logo_url": "https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/HEX.png",
+        "status": "active",
+        "platform_currency": "ETH",
+        "price": "0.24342000",
+        "price_date": "2022-01-03T00:00:00Z",
+        "price_timestamp": "2022-01-03T17:32:00Z",
+        "circulating_supply": "135654545971",
+        "max_supply": "637573444684",
+        "market_cap": "33021029357",
+        "market_cap_dominance": "0.0141",
+        "num_exchanges": "34",
+        "num_pairs": "100",
+        "num_pairs_unmapped": "8",
+        "first_candle": "2019-12-13T00:00:00Z",
+        "first_trade": "2020-05-18T00:00:00Z",
+        "first_order_book": "2020-03-11T00:00:00Z",
+        "rank": "10",
+        "rank_delta": "1",
+        "high": "0.48707738",
+        "high_timestamp": "2021-09-18T00:00:00Z",
+        "1d": {
+            "volume": "24096961.14",
+            "price_change": "0.017072335",
+            "price_change_pct": "0.0754",
+            "volume_change": "-8171684.09",
+            "volume_change_pct": "-0.2532",
+            "market_cap_change": "2265905473.95",
+            "market_cap_change_pct": "0.0737"
+        },
+        "30d": {
+            "volume": "895572745.53",
+            "price_change": "0.078731008",
+            "price_change_pct": "0.4781",
+            "volume_change": "257076093.54",
+            "volume_change_pct": "0.4026",
+            "market_cap_change": "10441196808.53",
+            "market_cap_change_pct": "0.4624"
+        },
+        "ytd": {
+            "volume": "94684435.80",
+            "price_change": "-0.042052319",
+            "price_change_pct": "-0.1473",
+            "volume_change": "-12195655.84",
+            "volume_change_pct": "-0.1141",
+            "market_cap_change": "-5824701542.85",
+            "market_cap_change_pct": "-0.1499"
+        }
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "id": "ADA",
+        "currency": "ADA",
+        "symbol": "ADA",
+        "name": "Cardano",
+        "logo_url": "https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/ada.svg",
+        "status": "active",
+        "price": "1.34227553",
+        "price_date": "2022-01-03T00:00:00Z",
+        "price_timestamp": "2022-01-03T17:33:00Z",
+        "circulating_supply": "32066390668",
+        "max_supply": "45000000000",
+        "market_cap": "43041931677",
+        "market_cap_dominance": "0.0184",
+        "num_exchanges": "134",
+        "num_pairs": "665",
+        "num_pairs_unmapped": "2",
+        "first_candle": "2017-10-01T00:00:00Z",
+        "first_trade": "2017-11-22T00:00:00Z",
+        "first_order_book": "2018-08-29T00:00:00Z",
+        "rank": "6",
+        "rank_delta": "0",
+        "high": "2.96758208",
+        "high_timestamp": "2021-09-03T00:00:00Z",
+        "1d": {
+            "volume": "986241775.91",
+            "price_change": "-0.038918560",
+            "price_change_pct": "-0.0282",
+            "volume_change": "3457482.43",
+            "volume_change_pct": "0.0035",
+            "market_cap_change": "-1247977749.58",
+            "market_cap_change_pct": "-0.0282"
+        },
+        "30d": {
+            "volume": "52845070345.09",
+            "price_change": "-0.084637717",
+            "price_change_pct": "-0.0593",
+            "volume_change": "-37710117535.60",
+            "volume_change_pct": "-0.4164",
+            "market_cap_change": "-2714026099.91",
+            "market_cap_change_pct": "-0.0593"
+        },
+        "ytd": {
+            "volume": "2530228374.78",
+            "price_change": "0.031999140",
+            "price_change_pct": "0.0244",
+            "volume_change": "-369239121.79",
+            "volume_change_pct": "-0.1273",
+            "market_cap_change": "1026096916.25",
+            "market_cap_change_pct": "0.0244"
+        }
+    }
+]
