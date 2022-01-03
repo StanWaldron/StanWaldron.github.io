@@ -1,0 +1,3 @@
+{
+    "error": "You didn't specify API key or it is incorrectly formatted. You should do it in query string parameter `apikey` or in http header named `X-CoinAPI-Key`"
+}
