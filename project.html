@@ -1,34 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="project.css">
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-    </style>
-
-
-  <!--The next three lines allow the Vega embed-->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+  <title>CodePen - Slideshow Concept V2 (No JS)</title>
+  <script defer type="text/javascript" src="https://pbutcher.uk/credit-tag/credit-tag-white-2.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="projecttest.css">
 
 </head>
-
-
-
 <body>
+<!-- partial:index.partial.html -->
+<fieldset class="slideshow">
 
-<p>
-    Relationship between music and economic conditions. Key areas to look at, GDP, real wages, consumption then relate this to the music. Pretty difficult to acquire accurate data of teh charts throughout the years and genre and so on from one place, without paying for a subscription. Instead, I used a csv file someone had collated to see the charts throughout the years, then used the spotify API to gather more inforamtion on these songs. This then allowed for comparison between them and the key economic indicators.
-</p>
+  <!-- Slide 1 -->
+  <input type="radio" id="slideCheckbox1" name="slide" checked autofocus></input>
+  <div class="slide">
+    <div class="slide__html">
+      <!-- You can include HTML instead of a background image using .slide__html -->
+    </div>
+    <div class="slide__content">
+      <h1>Slideshow Concept V2 (No JS)</h1>
+      <p>A pure CSS and HTML slideshow concept.</p>
+      <p>To add or remove slides:</p>
+      <ul>
+        <li>Add a new slide template and label in the HTML</li>
+        <li>Update the <code>$slide-count</code> SCSS variable</li>
+        <li>Tab colours: Update the <code>$c-slides</code> SCSS variable</li>
+        <li>Slide popout images: Update the <code>$b-slides</code> SCSS variable</li>
+      </ul>
+      <p>Use the tabs below to change slide</p>
+      <p><strong style="color: #0F0">NEW:</strong> Arrow keys work too after your first selection.</p>
+      <p>Et voila.</p>
+    </div>
+  </div>
 
-<p>Feel like there amy be some issues regarding the spotify API, the quick start guide asks for login, to get around this I am considering creating a burner account which will be permanently logged in on my website, so that I have access to all teh inforamtion i need</p>
+  <!-- Slide 2 -->
+  <input type="radio" id="slideCheckbox2" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <h1>More</h1>
+      <div class="dropdown-wrapper">
+        <button id="button">Change in Audio Features Over Time</button>
+        <ul id="dropdown" class="dropdown-content">
+          <li data-image="/audiofeatures/danceability.png" width = "640" height = "480" >Danceability</li>
+          <li data-image="/audiofeatures/duration_ms.png">Duration</li>
+          <li data-image="/audiofeatures/energy.png">Energy</li>
+          <li data-image="/audiofeatures/instrumentalness.png">Instrumentalness</li>
+          <li data-image="/audiofeatures/liveness.png">Liveness</li>
+          <li data-image="/audiofeatures/loudness.png">Loudness</li>
+          <li data-image="/audiofeatures/speechiness.png">Speechiness</li>
+          <li data-image="/audiofeatures/tempo.png">Tempo</li>
+          <li data-image="/audiofeatures/valence.png">Valence</li>
+        </ul>
+      </div>
+      <img id="image" style="display: none;">
+    </div>
+    <script  src="./script.js"></script>
+  </div>
+
+  <!-- Slide 3 -->
+  <input type="radio" id="slideCheckbox3" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <h1>Yet More</h1>
+      <p>Yet more here</p>
+      <div>
+        <img src="/audiofeatures/Consumption.png" width = "500" height = "500">
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <input type="radio" id="slideCheckbox4" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <h1>Zzz</h1>
+      <p>Yada yada</p>
+      <div>
+        <img src="/audiofeatures/Wages.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <input type="radio" id="slideCheckbox5" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <h1>The end</h1>
+      <p>It's over</p>
+    </div>
+  </div>
+
+  <!-- Add more slides here! -->
+
+  <nav>
+
+    <!-- Add slide labels here! -->
+
+    <label class="slide-button" for="slideCheckbox1">Intro</label>
+    <label class="slide-button" for="slideCheckbox2">More</label>
+    <label class="slide-button" for="slideCheckbox3">Yet More</label>
+    <label class="slide-button" for="slideCheckbox4">Zzz</label>
+    <label class="slide-button" for="slideCheckbox5">The End</label>
+  </nav>
+
+</fieldset>
+<!-- partial -->
+
 </body>
+</html>
