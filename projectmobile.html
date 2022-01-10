@@ -10,27 +10,28 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-
+<fieldset class="slideshow">
 
   <!-- Slide 1 -->
     <div>
-      <h1>Slideshow Concept V2 (No JS)</h1>
-      <p>A pure CSS and HTML slideshow concept.</p>
-      <p>To add or remove slides:</p>
-      <ul>
-        <li>Add a new slide template and label in the HTML</li>
-        <li>Update the <code>$slide-count</code> SCSS variable</li>
-        <li>Tab colours: Update the <code>$c-slides</code> SCSS variable</li>
-        <li>Slide popout images: Update the <code>$b-slides</code> SCSS variable</li>
-      </ul>
-      <p>Use the tabs below to change slide</p>
-      <p><strong style="color: #0F0">NEW:</strong> Arrow keys work too after your first selection.</p>
-      <p>Et voila.</p>
+      <h1 class="text">Data Science Project</h1>
+      <h2 class="text">Stanley Waldron - 1913361 </h2>
+      <p class="text">Welcome to my project for Data Science ECON30006. In this project I aim to investigate whether or not there is a relationship between the features of tracks that have topped the charts in the UK since 1953, and the economic indicators: household consumption and average annual wage growth.</p>
+      <p class="text">To complete this project, it was necessary for me to familiarise myself with the Spotify API and the ONS API, which would provide almost all of the data I needed. Throughout the project I have worked with Python, JavaScript, HTML and CSS in order to collate and present data in the most effective way, always being conscientious of the replicability of the project. The link to my GitHub can be found back on the homepage (<a href='https://stanwaldron.github.io'>here</a>).</p>
+      <p class="text"> Please use the tabs at the bottom to work your way through my project.</p>
+      <p class="text"><strong style="color: #0F0">NOTE:</strong> Arrow keys work too after your first selection.</p>
+      <p class="text">Enjoy</p>
     </div>
 
 
   <!-- Slide 2 -->
   <div>
+      <h2> First Visualisation </h2>
+      <p>The first visualisation I have created looks at the general trends found in the data extracted from the Spotify API. The dropdown menu on the right will give you the option to choose from 9 different audio features, the meanings of which can be found under the visualisation. </p>
+      <p>There are a few notable trends, like increases in danceability, energy, loudness and tempo. The loudness can be seen to have the steepest increase over time.</p>
+      <p>The code, which can be found below, maintains replicability by being able to take any Spotify playlist and produce data on these audio features for all of the tracks in that playlist.</p>
+      <p>Unfortunately, some early tracks were lost in the process of obtaining release dates as they aren’t tied to the track. Other tracks have also caused the data to be a bit dislocated as the first result in the search function would sometimes be a 21st century remastered version of the original album. </p>
+
       <div class="dropdown-wrapper">
         <button id="button">Change in Audio Features Over Time</button>
         <ul id="dropdown" class="dropdown-content">
@@ -62,14 +63,29 @@
 
     <div>
       <div>
+        <h2> Second Visualisation</h2>
+        <p>The next graph takes the audio features and regresses them against data I gathered on household consumption, from the ONS, on a matplotlib subplot. This visualisation is repeatable as its two functions can take any tidied dataset with the columns ‘Date’ and ‘Value’ and then produce a visualisation like this against the audio features. The biggest issue I faced with this was matching up these datasets, where consumption was measured quarterly and no. 1’s far more frequently. Since consumption and annual wage growth are macro variables, since these variables don’t change drastically in a week I replicated their values for n days after the initial date. n here, is the size of the music dataset over the size of the economic indicator dataset.</p>
+        <p>When we look at the data, it appears that as consumption grows there is an obvious decrease in danceability, energy and loudness, but an increase in valence, Spotify’s measure for cheerfulness. This appears to show that a relative increase in consumption causes songs to decrease in intensity but rise in cheerfulness, so calmer, happier songs tend to top the charts. </p>
         <img src="/audiofeatures/FINALCONSUMPTION.png" style="width:auto;height:auto;" class="regression">
+        <p class="text"> I'm sorry about the overlap on duration_ms, it was the only to have the figure not blurry. </p>
+        <a href='https://www.ons.gov.uk/economy/nationalaccounts/satelliteaccounts/timeseries/abjr/pn2'><h2 class="text">Data</h2></a>
+        <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/PlotEconIndicators.py'><h2 class="text">Code</h2></a>
       </div>
     </div>
 
   <!-- Slide 4 -->
     <div>
       <div>
+        <h3> Third visualisation </h3>
+        <p> Here I did the same for annual wage growth, ONS provided the best data for this. From this, peculiarly, we can see that almost the inverse relationship of music and household consumption is true for average annual wage growth. Danceability and energy increase whilst valence increases as the wage growth increases. This leads us to believe that as wage growth increases, songs become slightly less cheerful but more orientated on dancing and energy. </p>
+        <p>Things Can Only Get Better: Danceability = 0.7, Valence 0.1.</p>
+        <p>Going Underground: Danceability = 0.3, Valence 0.94.</p>
+        <p>Here are two songs for reference on the features.</p>
         <img src="/audiofeatures/FINALWAGES.png" style="width:auto;height:auto;" class="regression">
+        <a href='https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/kgq4/ukea'><h2 class="text">Data</h2></a>
+        <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/PlotEconIndicators.py'><h2 class="text">Code</h2></a>
+        <a href='https://www.youtube.com/watch?v=Dl-ai9HuR60'><h2 class="text">D:Ream - Things Can Only Get Better</h2></a>
+        <a href='https://www.youtube.com/watch?v=AE1ct5yEuVY'><h2 class="text">The Jam - Going Underground</h2></a>
       </div>
     </div>
 
@@ -77,12 +93,23 @@
   <!-- Slide 5 -->
     <div >
       <div>
+        <h2>Fourth Visualisation</h2>
+        <p>To further investigate this relative inversion from wages to consumption I decided to plot a regression between the two and discover more about their relationship. Here are the results:</p>
+        <p>Coefficient: [-2.83063067e-05]</p>
+        <p>R^2: 0.12</p>
+        <p>Here we can see that the coefficient of determination is very small, so not very much of the movement in wages can be explained by changes in consumption. </p>
+
       <img src="/audiofeatures/wagescosnreg.png" style="width:auto;height:auto;" class="regression">
+      <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/wagecosnreg.py'><h2 class="text">Code</h2></a>
       </div>
     </div>
 
 
     <div>
+      <h2>Fifth Visualisation</h2>
+      <p>In order to mitigate some of the data loss from the earlier songs and remastered albums, I have created a visualisation that looks at how danceability, valence and energy have changed over the period 1990-2013. In this range, the songs are new enough that they haven’t needed to be remastered yet and we see a continual growth in consumption from 1990 to 2008 and then a drop, which gives us a good opportunity to see if there is any direct impact. You can change the variables underneath.</p>
+      <p>This also brings this project to a suitable conclusion, any relationship there appears to be between these audio features and the economic indicators is largely sporadic and the changes in no.1’s are far too fickle to compare to the long-term economic indicators. This data is only tracking the number 1’s and not surges in various genres and cultures, like Punk Rock’s emergence coinciding with the Winter of Discontent. If Spotify adds more data on the genre of tracks and albums, it would be interesting to see how that data interacted with the economic indicators and I plan to work on this as my data science skills grow.</p>
+      <p>You can change the variable below the visualisation.</p>
       <div class="chart" id="timechart">
         <script>
           var myChart13 = "/Project Data Science 2021/timeframes.json";
@@ -90,4 +117,3 @@
         </script>
       </div>
     </div>
-  </body>
