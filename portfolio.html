@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="portfolio.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+    </style>
+
+  <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+
+
+<body>
+
+  <h1>Data Science Portfolio</h1>
+  <h3>Objective</h3>
+  <p> Throughout the course, we had weekly tasks that aimed to develop our data science skills, often building on the week before and adding an extra element. As the portfolio develops, you can see an increasing proficiency in Python, JavaScript, HTML and CSS. </p>
+  <h3>Week 1 and 2</h3>
+  <p>The next three charts were all given to us, it was an opportunity to build a website and learn how to embed visualisations with vega.</p>
+
+  <div class="chart" id="firstChart">
+
+    <script>
+      // Following the script tag we are using Javascript.
+      // One way to tell is to see how comments work...
+      // First job is to set the chart as a JS variable:
+      var myChart1 = "/PortfolioCharts/chart1_covidUKRegions.json";
+      // Now we simply insert it, using Vega's embed code:
+      // The embed function needs to be told the location, and what to put there.
+      vegaEmbed('#firstChart', myChart1);
+    </script>
+
+  </div>
+
+  <div class="week1">
+  <div class="chart" id="secondChart">
+
+    <script>
+      // Following the script tag we are using Javascript.
+      // One way to tell is to see how comments work...
+      // First job is to set the chart as a JS variable:
+      //chart2_ukProductivity.json
+      var myChart2 = "/PortfolioCharts/chart2_ukProductivity.json";
+      // Now we simply insert it, using Vega's embed code:
+      // The embed function needs to be told the location, and what to put there.
+      vegaEmbed('#secondChart', myChart2);
+    </script>
+
+  </div>
+
+  <div class="chart" id="thirdChart">
+
+    <script>
+      // Following the script tag we are using Javascript.
+      // One way to tell is to see how comments work...
+      // First job is to set the chart as a JS variable:
+      var myChart3 = "/PortfolioCharts/repochart.json";
+      // Now we simply insert it, using Vega's embed code:
+      // The embed function needs to be told the location, and what to put there.
+      vegaEmbed('#thirdChart', myChart3);
+    </script>
+
+  </div>
+</div>
+  <h3>Week 3</h3>
+
+  <h3>Covid-19 Regional Cases</h3>
+
+  <p>The next two charts show us different ways we can work with data, whether it is live through an API - like the first graph - or static with data we have downloaded, like the second.</p>
+
+  <!--Vaga embed, with notes for what is going on-->
+  <div class="chart" id="fourthChart">
+
+    <script>
+      // Following the script tag we are using Javascript.
+      // One way to tell is to see how comments work...
+      // First job is to set the chart as a JS variable:
+      var myChart4 = "/PortfolioCharts/APIchart.json";
+      // Now we simply insert it, using Vega's embed code:
+      // The embed function needs to be told the location, and what to put there.
+      vegaEmbed('#fourthChart', myChart4);
+    </script>
+
+  </div>
+
+  <div class="chart" id="fifthChart">
+    <script>
+      var myChart5 = "/PortfolioCharts/Staticchart.json";
+      vegaEmbed('#fifthChart', myChart5);
+    </script>
+  </div>
+  <h3>Week 4</h3>
+  <p> This week the focus was on working on the data within visulaisations. The bar graph is an example of creating a visualisation that has had its data hard coded in, the two graphs below show a sin(x) and cos(x) graph that I then added tan(x) to. Having thought this would be an easy addition, I quickly realised that the points at which tan(x) became undefined would create some issues. Thankfully, I was able to mitigate these issues by creating a phase and then using folds to stop the data from trying to rejoin teh rest of the data after the points of no definition. </p>
+
+  <div class="chart" id="sixthChart">
+    <script>
+      var myChart6 = "/PortfolioCharts/bar.json";
+      vegaEmbed('#sixthChart', myChart6);
+    </script>
+  </div>
+
+  <div class="chart" id="seventhChart">
+    <script>
+      var myChart7 = "/PortfolioCharts/triggraph.json";
+      vegaEmbed('#seventhChart', myChart7);
+    </script>
+  </div>
+
+  <div class="chart" id="eighthChart">
+    <script>
+      var myChart8 = "/PortfolioCharts/addedtrig.json";
+      vegaEmbed('#eighthChart', myChart8);
+    </script>
+  </div>
+
+<h3>Week 5</h3>
+<p> Week 4 involved working with APIs. Just like the the trigonometry graphs, I bit off more than I could chew when plotting the goal difference for Crystal Palace's away and home matches last season with Sport Data API. Not only was the tidying of the data a useful learning opportunity, but there were difficulties in plotting when the graph plotted zero on away goal difference when a home amcth was played and vice versa. Ths solution to this is here: . The second visualisation uses Coin API to plot the prices of Cardano<p>
+<!-- Next project will use the sportdataAPI, maybe looking at whether the bookmakers' favourites match results -->
+
+<div class="chart" id="ninthChart">
+  <script>
+    var myChart9 = "/PortfolioCharts/sportdataAPI.json";
+    vegaEmbed('#ninthChart', myChart9);
+  </script>
+</div>
+
+<div class="chart" id="adaChart">
+  <script>
+    var myChart19 = "/PortfolioCharts/ADA.json";
+    vegaEmbed('#adaChart', myChart19);
+  </script>
+</div>
+
+<h3> Week 6 </h3>
+<p> loop through API </p>
+<div class="chart" id="bitcoinChart">
+  <script>
+    var myChart15 = "/APILoop/gb.json";
+    vegaEmbed('#bitcoinChart', myChart15);
+  </script>
+</div>
+<div class="chart" id="franceChart">
+  <script>
+    var myChart16 = "APILoop/fr.json";
+    vegaEmbed('#franceChart', myChart16);
+  </script>
+</div>
+<div class="chart" id="usChart">
+  <script>
+    var myChart17 = "APILoop/us.json";
+    vegaEmbed('#usChart', myChart17);
+  </script>
+</div>
+<div class="chart" id="chChart">
+  <script>
+    var myChart18 = "APILoop/ch.json";
+    vegaEmbed('#chChart', myChart18);
+  </script>
+</div>
+
+<h3> Week 7 </h3>
+<p> Scrapers were our main focus this week and in thsi visualisation I scraped university rankings and graduate prospects from <a href="https://www.thecompleteuniversityguide.co.uk/league-tables/rankings">here</a>.<p>
+<div class="chart" id="elevenChart">
+  <script>
+    var myChart11 = "/PortfolioCharts/GradProspects.json";
+    vegaEmbed('#elevenChart', myChart11);
+  </script>
+</div>
+
+<h3> Week 8 </h3>
+
+<p> This week we were given access to the Talking Economics and events and asked to make a note of one claim made and find some data to refute that. <p>
+<p> On the Thursday, in the 'An Unfair Crisis' talk, Abi Adams-Prassl claimed that the labour market looked 'rosy' before the pandemic. Though large areas of the labour market were in a good condition, it is clear that the number of claimant counts was on the rise. When comparing this to the unemployment rate, which doesn't rise to nearly the same degree, it is clear that it is not just unemployed people that were claiming for assisstance in some form, but rather those that are working as well as claiming. This is could be due to the rise of workers in the gig economy, who may not be able to work enough to fully sustain themselves. Ultimately, this picture of the labour market does not look particularly 'rosy' as sustained growth on the claimant count - besides the obviosu spike from covid - could place extra pressures on government spending which means fewer jobs can be created from government spending. This could particularly be the case after covid as the pressures on spending will already be high.
+</p>
+<div>
+<img src="/audiofeatures/UK_Claimants.png" width="640" height="480">
+</div>
+
+<h3> Week 9 </h3>
+<p> This week we had to collate data from two sources and run a regression between them. I chose to get the self reported life satisfaction scores of US citizens from <a href='https://ourworldindata.org/happiness-and-life-satisfaction'>here</a> and data on the number of films Nicholas Cage has been in, since he has been in so many, from <a href='https://en.wikipedia.org/wiki/Nicolas_Cage_filmography'>here</a>. Unfortunately for Nick, it looked like there was a coefficient of -0.01007132 as the number of his films increased and life satisfaction decreased. The R^2 value was 0.53.
+<div>
+<img src="/audiofeatures/NickCage.png" width="640" height="480">
+</div>
+
+<h3> Week 10 </h3>
+  <p> For week 10 we had to build two interactive charts, I built one that showed the exact value and date of population growth when you hovered over it and another that showed the unemployment level, and you can zoom in to specific periods of time. </p>
+<div class="chart" id="thirteenChart">
+  <script>
+    var myChart13 = "/PortfolioCharts/interactive_line.json";
+    vegaEmbed('#thirteenChart', myChart13);
+  </script>
+</div>
+
+<div class="chart" id="fourteenChart">
+  <script>
+    var myChart14 = "/PortfolioCharts/interactive_x_axis.json";
+    vegaEmbed('#fourteenChart', myChart14);
+  </script>
+</div>
+
+</body>
+
+
+</html>

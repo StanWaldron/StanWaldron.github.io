@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<script type="text/javascript">
+  <!--
+  // if (screen.width <= 700) {
+  // document.location = "projectmobile.html";
+  // }
+  //-->
+</script>
+  <meta charset="UTF-8">
+  <title>Stanley Waldron Data Science Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="project.css">
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<fieldset class="slideshow">
+
+  <!-- Slide 1 -->
+  <input type="radio" id="slideCheckbox1" name="slide" checked autofocus></input>
+  <div class="slide">
+    <div class='slide__html'>
+    <p> Test </p>
+    </div>
+    <div class="slide__content">
+      <h1 class="text">Data Science Project</h1>
+      <h2 class="text">Stanley Waldron - 1913361 </h2>
+      <p class="text">Welcome to my project for Data Science ECON30006. In this project I aim to investigate whether or not there is a relationship between the features of tracks that have topped the charts in the UK since 1953, and the economic indicators: household consumption and average annual wage growth.</p>
+      <p class="text">To complete this project, it was necessary for me to familiarise myself with the Spotify API and the ONS API, which would provide almost all of the data I needed. Throughout the project I have worked with Python, JavaScript, HTML and CSS in order to collate and present data in the most effective way, always being conscientious of the replicability of the project. The link to my GitHub can be found back on the homepage (<a href='https://stanwaldron.github.io'>here</a>).</p>
+      <p class="text"> Please use the tabs at the bottom to work your way through my project.</p>
+      <p class="text"><strong style="color: #0F0">NOTE:</strong> Arrow keys work too after your first selection.</p>
+      <p class="text">Enjoy</p>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <input type="radio" id="slideCheckbox2" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+
+      <div class="dropdown-wrapper">
+        <button id="button">Change in Audio Features Over Time</button>
+        <ul id="dropdown" class="dropdown-content">
+          <li data-image="/audiofeatures/danceability.png" width = "640" height = "480" >Danceability</li>
+          <li data-image="/audiofeatures/duration_ms.png">Duration</li>
+          <li data-image="/audiofeatures/energy.png">Energy</li>
+          <li data-image="/audiofeatures/instrumentalness.png">Instrumentalness</li>
+          <li data-image="/audiofeatures/liveness.png">Liveness</li>
+          <li data-image="/audiofeatures/loudness.png">Loudness</li>
+          <li data-image="/audiofeatures/speechiness.png">Speechiness</li>
+          <li data-image="/audiofeatures/tempo.png">Tempo</li>
+          <li data-image="/audiofeatures/valence.png">Valence</li>
+        </ul>
+      </div>
+      <img id="image" style="display: none;">
+      <a href='https://open.spotify.com/playlist/5GEf0fJs9xBPr5R4jEQjtw' align=center>
+        <h3> Spotify Playlist </h3>
+      </a>
+      <a href='https://open.spotify.com/playlist/5GEf0fJs9xBPr5R4jEQjtw' align=center>
+        <h3>Code</h3>
+      </a>
+      <a href='https://link.springer.com/article/10.1007%2Fs11606-019-05210-4' align=center>
+        <h3>Paper on Loudness</h3>
+      </a>
+    </div>
+    <script  src="./script.js"></script>
+  </div>
+
+  <!-- Slide 3 -->
+  <input type="radio" id="slideCheckbox3" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <div>
+        <img src="/audiofeatures/FINALCONSUMPTION.png" style="width:auto;height:100%;" class="regression">
+      </div>
+      <p class="text"> I'm sorry about the overlap on duration_ms, it was the only to have the figure not blurry. </p>
+      <a href='https://www.ons.gov.uk/economy/nationalaccounts/satelliteaccounts/timeseries/abjr/pn2'><h2 class="text">Data</h2></a>
+      <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/PlotEconIndicators.py'><h2 class="text">Code</h2></a>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <input type="radio" id="slideCheckbox4" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <div>
+        <img src="/audiofeatures/FINALWAGES.png" style="width:auto;height:100%;" class="regression">
+      </div>
+      <p class="text"> I'm sorry about the overlap on duration_ms, it was the only to have the figure not blurry. </p>
+      <a href='https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/kgq4/ukea'><h2 class="text">Data</h2></a>
+      <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/PlotEconIndicators.py'><h2 class="text">Code</h2></a>
+      <a href='https://www.youtube.com/watch?v=Dl-ai9HuR60'><h2 class="text">D:Ream - Things Can Only Get Better</h2></a>
+      <a href='https://www.youtube.com/watch?v=AE1ct5yEuVY'><h2 class="text">The Jam - Going Underground</h2></a>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <input type="radio" id="slideCheckbox5" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <div>
+      <img src="/audiofeatures/wagescosnreg.png" style="width:75%;height:auto;" class="wagescons">
+      </div>
+      <a href='https://github.com/StanWaldron/StanWaldron.github.io/tree/main/ProjectDataScience2021/wagecosnreg.py'><h2 class="text">Code</h2></a>
+    </div>
+  </div>
+
+
+  <input type="radio" id="slideCheckbox6" name="slide"></input>
+  <div class="slide">
+    <div class="slide__content">
+      <div class="chart" id="timechart" class="regression">
+        <script>
+          var myChart13 = "/ProjectDataScience2021/timeframes.json";
+          vegaEmbed('#timechart', myChart13);
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more slides here! -->
+
+  <nav>
+
+    <!-- Add slide labels here! -->
+
+    <label class="slide-button" for="slideCheckbox1">Intro</label>
+    <label class="slide-button" for="slideCheckbox2">Features</label>
+    <label class="slide-button" for="slideCheckbox3">Consumption</label>
+    <label class="slide-button" for="slideCheckbox4">Wages</label>
+    <label class="slide-button" for="slideCheckbox5">Regression</label>
+    <label class="slide-button" for="slideCheckbox6">Period Data</label>
+  </nav>
+
+</fieldset>
+<!-- partial -->
+
+</body>
+</html>
