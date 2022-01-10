@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/StanWaldron/StanWaldron.github.io/main/Data/CrystalPalace.csv"
+  },
+  "height": 500,
+  "width": 500,
+  "transform": [{"fold": ["Home_GD", "Away_GD"], "as": ["key", "Goals"]}],
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal"},
+    "y": {"field": "Goals", "type": "quantitative"},
+    "color": {"field": "key", "type": "nominal"}
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.key == 'Home_GD' && datum.Home_GD != ''"}],
+      "mark": "line"
+    },
+    {
+      "transform": [{"filter": "datum.key == 'Away_GD' && datum.Away_GD != ''"}],
+      "mark": "line"
+    }
+  ]
+}

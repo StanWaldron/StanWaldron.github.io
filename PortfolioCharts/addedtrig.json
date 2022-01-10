@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Plots three functions using a generated sequence.",
+  "width": 500,
+  "height": 250,
+  "data": {"sequence": {"start": 0, "stop": 12.7, "step": 0.1, "as": "x"}},
+  "transform": [
+    {"calculate": "sin(datum.x)", "as": "sin(x)"},
+    {"calculate": "cos(datum.x)", "as": "cos(x)"},
+    {"calculate": "tan(datum.x)", "as": "tan(x)"},
+    {"calculate": "floor(datum.x / PI - 0.5)", "as": "phase"}
+  ],
+  "encoding": {
+    "x": {"type": "quantitative", "field": "x"},
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {"domain": [-3, 3]}
+    },
+    "color": {"field": "key", "type": "nominal", "title": null}
+  },
+  "layer": [
+    {"transform": [{"fold": ["sin(x)", "cos(x)"]}], "mark": "line"},
+    {
+      "transform": [{"fold": ["tan(x)"]}],
+      "mark": {"type": "line", "clip": true},
+      "encoding": {"detail": {"field": "phase", "type": "ordinal"}}
+    }
+  ]
+}

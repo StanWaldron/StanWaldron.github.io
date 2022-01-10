@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/StanWaldron/StanWaldron.github.io/main/Data/unis_table.csv"},
+  "mark": {
+    "type" : "line",
+
+    "color":"seagreen",
+
+    "strokeWidth":2,
+
+    "opacity":1},
+
+  "title" :  {
+
+    "text": "Graduate Prospects By Ranking",
+
+    "subtitle": "United Kingdom",
+
+    "subtitleFontStyle":"italic",
+
+    "subtitleFontSize":10,
+
+    "anchor": "start",
+
+    "color": "black"
+
+
+
+  },
+
+  "width":500,
+
+  "height":500,
+
+  "encoding": {
+    "x": {"field": "Ranking", "type": "quantitative"},
+    "y": {"field": "Graduate Prospects in %", "type": "quantitative"}
+  }
+}
