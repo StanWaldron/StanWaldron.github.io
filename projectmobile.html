@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-<script type="text/javascript">
-  <!--
-  if (screen.width <= 700) {
-  document.location = "projectmobile.html";
-  }
-  //-->
-</script>
   <meta charset="UTF-8">
   <title>Stanley Waldron Data Science Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="projectmobile.css">
@@ -20,12 +13,7 @@
 <fieldset class="slideshow">
 
   <!-- Slide 1 -->
-  <input type="radio" id="slideCheckbox1" name="slide" checked autofocus></input>
-  <div class="slide">
-    <div class='slide__html'>
-    <p> Test </p>
-    </div>
-    <div class="slide__content">
+    <div>
       <h1>Slideshow Concept V2 (No JS)</h1>
       <p>A pure CSS and HTML slideshow concept.</p>
       <p>To add or remove slides:</p>
@@ -39,13 +27,10 @@
       <p><strong style="color: #0F0">NEW:</strong> Arrow keys work too after your first selection.</p>
       <p>Et voila.</p>
     </div>
-  </div>
+
 
   <!-- Slide 2 -->
-  <input type="radio" id="slideCheckbox2" name="slide"></input>
-  <div class="slide">
-    <div class="slide__content">
-
+  <div>
       <div class="dropdown-wrapper">
         <button id="button">Change in Audio Features Over Time</button>
         <ul id="dropdown" class="dropdown-content">
@@ -70,44 +55,34 @@
       <a href='https://link.springer.com/article/10.1007%2Fs11606-019-05210-4' align=center>
         <h3>Paper on Loudness</h3>
       </a>
-    </div>
     <script  src="./script.js"></script>
-  </div>
+    </div>
 
   <!-- Slide 3 -->
-  <input type="radio" id="slideCheckbox3" name="slide"></input>
-  <div class="slide">
-    <div class="slide__content">
+
+    <div>
       <div>
-        <img src="/audiofeatures/FINALCONSUMPTION.png" style="width:100%;height:auto;" class="regression">
+        <img src="/audiofeatures/FINALCONSUMPTION.png" style="width:auto;height:auto;" class="regression">
       </div>
     </div>
-  </div>
 
   <!-- Slide 4 -->
-  <input type="radio" id="slideCheckbox4" name="slide"></input>
-  <div class="slide">
-    <div class="slide__content">
+    <div>
       <div>
-        <img src="/audiofeatures/FINALWAGES.png" style="width:100%;height:auto;" class="regression">
+        <img src="/audiofeatures/FINALWAGES.png" style="width:auto;height:auto;" class="regression">
       </div>
     </div>
-  </div>
+
 
   <!-- Slide 5 -->
-  <input type="radio" id="slideCheckbox5" name="slide"></input>
-  <div class="slide">
-    <div class="slide__content">
+    <div >
       <div>
-      <img src="/audiofeatures/wagescosnreg.png" style="width:75%;height:auto;" class="regression">
+      <img src="/audiofeatures/wagescosnreg.png" style="width:auto;height:auto;" class="regression">
       </div>
     </div>
-  </div>
 
 
-  <input type="radio" id="slideCheckbox6" name="slide"></input>
-  <div class="slide">
-    <div class="slide__content">
+    <div>
       <div class="chart" id="timechart">
         <script>
           var myChart13 = "/Project Data Science 2021/timeframes.json";
@@ -115,4 +90,3 @@
         </script>
       </div>
     </div>
-  </div>
