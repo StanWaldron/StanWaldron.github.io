@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "description": "Pollution data using satellite imagary from emissions API. The chart makes two separate API calls, one to get the UK data, and one to get the data for a specific point, in this case the coordinates for the city of Bristol.",
+
+    "title": {
+    "text": "Emissions - China",
+    "subtitle": "Source: Emissions API",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+    "width":500,
+    "height":500,
+
+    "encoding": {
+
+      "x": {
+        "field": "end",
+        "type": "temporal",
+        "title":null
+        },
+
+      "y": {
+        "field": "average",
+        "type": "quantitative",
+        "title":null
+        }
+    },
+
+
+
+    "data": {"url": "https://raw.githubusercontent.com/StanWaldron/StanWaldron.github.io/main/Data/data-crypto-ch.json"},
+
+    "mark":{
+      "type": "line",
+      "color":"gold",
+      "opacity":1
+    }
+  }
