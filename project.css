@@ -118,7 +118,7 @@ input:checked:nth-of-type(6) ~ nav label:nth-child(6) {
   display: none;
 }
 .slide:nth-child(4) {
-  background: url("/audiofeatures/page-2-small.png");
+  background: url("/audiofeatures/page2.png");
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
